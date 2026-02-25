@@ -1,0 +1,49 @@
+/* ATS Resume Builder - Global Styles */
+:root {
+  --bg-primary: #fafbfc;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1d23;
+  --text-secondary: #5c6370;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #e5e7eb;
+  --success: #059669;
+  --warning: #d97706;
+  --error: #dc2626;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'IBM Plex Serif', Georgia, serif;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f1114;
+  --bg-secondary: #1a1d23;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --border: #374151;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}

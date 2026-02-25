@@ -1,0 +1,16 @@
+{
+  "name": "ats-resume-builder",
+  "version": "1.0.0",
+  "description": "ATS-friendly Resume Builder with Live Preview and Resume Optimizer",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

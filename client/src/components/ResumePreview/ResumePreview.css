@@ -1,0 +1,254 @@
+/* ==========================================================================
+   Resume Preview – ATS-friendly, print-safe, clean spacing system
+   Letter: 8.5in = 816px at 96dpi
+   ========================================================================== */
+
+.resume-preview,
+.resume-preview * {
+  box-sizing: border-box;
+}
+
+.resume-preview {
+  font-size: 15px;
+  line-height: 1.35;
+  color: #1a1a1a;
+  background: #fff;
+  padding: 48px;
+  min-height: 1056px;
+  width: 816px;
+  max-width: 816px;
+  margin: 0 auto;
+  overflow-wrap: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+
+.rp-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+}
+
+.rp-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.rp-contact-row {
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.rp-contact-row--line2 {
+  margin-bottom: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Sections
+   -------------------------------------------------------------------------- */
+
+.rp-section {
+  margin-bottom: 8px;
+  page-break-before: avoid;
+  break-before: avoid;
+}
+
+.rp-section-title {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px 0;
+  border-bottom: 1px solid #999;
+  padding-bottom: 4px;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+.rp-summary,
+.rp-skills {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   Skills
+   -------------------------------------------------------------------------- */
+
+.rp-skills-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rp-skill-line {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* --------------------------------------------------------------------------
+   Generic Block (Experience, Education, Certifications)
+   -------------------------------------------------------------------------- */
+
+.rp-block {
+  margin-bottom: 6px;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.rp-block-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.rp-block-header > *:first-child {
+  flex: 1 1 0%;
+  min-width: 0;
+  word-break: break-word;
+  text-align: left;
+}
+
+.rp-block-header > *:last-child:not(:only-child) {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.rp-block-header > *:only-child {
+  flex: 1 1 100%;
+  text-align: left;
+}
+
+.rp-bold-row strong {
+  font-weight: bold;
+}
+
+.rp-tech-stack,
+.rp-desc {
+  font-size: 15px;
+}
+
+.rp-desc {
+  word-break: break-word;
+}
+
+/* --------------------------------------------------------------------------
+   Bullets (Global)
+   -------------------------------------------------------------------------- */
+
+.rp-bullets {
+  margin: 2px 0 0 0;
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.rp-bullets li {
+  margin-bottom: 2px;
+  word-break: break-word;
+}
+
+.rp-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   PROJECTS – Margin-collapse-proof system
+   -------------------------------------------------------------------------- */
+
+.rp-section--projects {
+  margin-bottom: 8px;
+  --rp-project-gap: 4px;
+}
+
+.rp-section--projects .rp-section-title {
+  margin-bottom: var(--rp-project-gap);
+}
+
+.rp-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rp-project-gap);
+  margin: 0;
+  padding: 0;
+}
+
+.rp-project-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;                 /* 🔥 controls ALL internal spacing */
+  margin: 0;
+  padding: 0;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Remove ALL internal margins inside project */
+.rp-project-block > * {
+  margin: 0;
+}
+
+/* Specific bullet tuning inside project */
+.rp-project-block .rp-bullets {
+  padding-left: 20px;
+}
+
+.rp-project-block .rp-bullets li {
+  margin-bottom: 2px;
+}
+
+.rp-project-block .rp-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Certifications
+   -------------------------------------------------------------------------- */
+
+.rp-cert-block {
+  margin-bottom: 4px;
+}
+
+.rp-cert-company {
+  margin: 2px 0 0 0;
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .resume-preview {
+    box-shadow: none;
+    margin: 0;
+    padding: 48px;
+    width: 816px;
+    max-width: 816px;
+  }
+
+  .rp-block,
+  .rp-section-title {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .rp-section {
+    page-break-before: avoid;
+    break-before: avoid;
+  }
+
+  .rp-section-title {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+}

@@ -1,0 +1,23 @@
+Senior Full-Stack Developer
+
+We are looking for a Senior Full-Stack Developer to join our engineering team. You will be responsible for building and maintaining our web applications.
+
+REQUIREMENTS:
+- 5+ years of experience in software development
+- Strong proficiency in JavaScript, TypeScript, React, and Node.js
+- Experience with REST APIs and GraphQL
+- Familiarity with AWS, Docker, and Kubernetes
+- Database experience: PostgreSQL, MongoDB
+- Git, CI/CD, Agile/Scrum methodologies
+
+NICE TO HAVE:
+- Python experience
+- Machine learning basics
+- Microservices architecture
+
+RESPONSIBILITIES:
+- Design and develop scalable web applications
+- Collaborate with product and design teams
+- Write clean, maintainable code
+- Mentor junior developers
+- Participate in code reviews
